@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello Again
-        run: pritnt("Hello again, World!")
+        run: print("Hello again, World!")
         shell: python
   job3:
     runs-on: ubuntu-latest
