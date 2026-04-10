@@ -13,3 +13,21 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello, World!"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello Again
+        run: pritnt "Hello again, World!"
+        shell: python
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job2, say-hello]
+    steps:
+      - name: Say Hello Again Again
+        run: echo "Hello again again, World!"
+  job4:
+    runs-on: ubuntu-latest
+    needs: [job3]
+    steps:
+      - name: Say Hello Again Again Again
+        run: echo "Hello again again again, World!"
